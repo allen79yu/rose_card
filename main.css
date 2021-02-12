@@ -1,0 +1,93 @@
+html {
+  font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft JhengHei",微軟正黑體,sans-serif;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #389ba6;
+}
+
+.cardContainer {
+  width: calc(100% - 48px);
+  max-width: 360px;
+  animation: flip infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes flip {
+  from {transform: rotate3d(0, 1, 0, -25deg);}
+  to {transform: rotate3d(0, 1, 0, 25deg);}
+}
+
+.card {
+  position: relative;
+  padding-top: 166%;
+  background-color: #f2eddf;
+  border-radius: 8px;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  text-align: center;
+  margin-top: 24px;
+  color: #d96459;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.imgContainer {
+  border: 5px solid #f2c6b6;
+  border-radius: 8px;
+  background-color: #f2c6b6;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  background-color: #49bfbf;
+  border: #389ba6 5px solid;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 24px auto;
+}
+
+button:active {
+  background-color: #d96459;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #d96459;
+  transform: scale(0);
+  transition: transform .2s ease-out;
+}
+
+.coupon.show {
+  transform: scale(1);
+}
